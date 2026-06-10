@@ -27,7 +27,19 @@ export default async function GroupsPage() {
         {Object.entries(groupedData || {}).map(([groupName, teams]) => (
           <div
             key={groupName}
-            className="rounded-3xl border border-white/10 bg-white/5 p-8">
+            className="
+rounded-3xl
+border
+border-white/10
+bg-white/5
+backdrop-blur-xl
+p-8
+transition-all
+duration-300
+hover:-translate-y-2
+hover:border-cyan-400
+hover:shadow-[0_0_40px_rgba(110,172,218,0.25)]
+">
             <h2 className="text-3xl font-bold mb-6">{groupName}</h2>
 
             <table className="w-full">

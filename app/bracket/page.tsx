@@ -9,7 +9,19 @@ export default function BracketPage() {
         {bracket.quarterFinals.map((match, index) => (
           <div
             key={index}
-            className="rounded-3xl border border-white/10 bg-white/5 p-8">
+            className="
+rounded-3xl
+border
+border-white/10
+bg-white/5
+backdrop-blur-xl
+p-8
+transition-all
+duration-300
+hover:-translate-y-2
+hover:border-cyan-400
+hover:shadow-[0_0_40px_rgba(110,172,218,0.25)]
+">
             <div className="flex justify-between">
               <span>{match.team1}</span>
               <span>{match.score1}</span>

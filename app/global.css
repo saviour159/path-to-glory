@@ -1,0 +1,18 @@
+:root {
+  --bg-primary: #021526;
+  --bg-secondary: #03346e;
+  --accent: #6eacda;
+  --gold: #e2e2b6;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gold-glow {
+  text-shadow:
+    0 0 10px rgba(226, 226, 182, 0.5),
+    0 0 30px rgba(226, 226, 182, 0.3);
+}
