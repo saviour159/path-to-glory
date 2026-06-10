@@ -1,7 +1,27 @@
+import { bracket } from "@/data/bracket";
+
 export default function BracketPage() {
   return (
-    <div className="min-h-screen bg-[#021526] text-white p-10">
-      <h1 className="text-5xl font-bold">World Cup Bracket</h1>
-    </div>
+    <main className="min-h-screen bg-[#021526] text-white p-10">
+      <h1 className="text-5xl font-bold mb-10">Knockout Bracket</h1>
+
+      <div className="grid md:grid-cols-2 gap-6">
+        {bracket.quarterFinals.map((match, index) => (
+          <div
+            key={index}
+            className="rounded-3xl border border-white/10 bg-white/5 p-8">
+            <div className="flex justify-between">
+              <span>{match.team1}</span>
+              <span>{match.score1}</span>
+            </div>
+
+            <div className="flex justify-between mt-3">
+              <span>{match.team2}</span>
+              <span>{match.score2}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </main>
   );
 }
