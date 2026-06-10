@@ -33,6 +33,10 @@ export default function Navbar() {
         <Link href="/leaderboard" className="hover:text-cyan-400 transition">
           Leaderboard
         </Link>
+
+        <Link href="/groups" className="hover:text-cyan-400 transition">
+          Groups
+        </Link>
       </div>
     </nav>
   );
