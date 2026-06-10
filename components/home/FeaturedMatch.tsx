@@ -1,8 +1,13 @@
 import { Trophy } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function FeaturedMatch() {
   return (
-    <div className="max-w-5xl mx-auto mt-20 px-6">
+    <div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="max-w-5xl mx-auto mt-20 px-6">
       <div className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-8">
         <div className="flex items-center gap-3 mb-6">
           <Trophy className="text-yellow-400" />

@@ -1,6 +1,7 @@
 import Countdown from "@/components/home/Countdown";
 import FeaturedMatch from "@/components/home/FeaturedMatch";
 import Stats from "@/components/home/Stats";
+import TeamShowcase from "@/components/home/TeamShowcase";
 export default function Home() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-[#021526] text-white">
@@ -49,6 +50,7 @@ export default function Home() {
       <Countdown />
       <FeaturedMatch />
       <Stats />
+      <TeamShowcase />
     </main>
   );
 }
