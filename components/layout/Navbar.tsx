@@ -10,17 +10,29 @@ export default function Navbar() {
       </Link>
 
       <div className="hidden md:flex gap-8 text-sm">
-        <Link href="/">Home</Link>
+        <Link href="/" className="hover:text-cyan-400 transition">
+          Home
+        </Link>
 
-        <Link href="/matches">Matches</Link>
+        <Link href="/matches" className="hover:text-cyan-400 transition">
+          Matches
+        </Link>
 
-        <Link href="/bracket">Bracket</Link>
+        <Link href="/bracket" className="hover:text-cyan-400 transition">
+          Bracket
+        </Link>
 
-        <Link href="/teams">Teams</Link>
+        <Link href="/teams" className="hover:text-cyan-400 transition">
+          Teams
+        </Link>
 
-        <Link href="/predictions">Predictions</Link>
+        <Link href="/predictions" className="hover:text-cyan-400 transition">
+          Predictions
+        </Link>
 
-        <Link href="/leaderboard">Leaderboard</Link>
+        <Link href="/leaderboard" className="hover:text-cyan-400 transition">
+          Leaderboard
+        </Link>
       </div>
     </nav>
   );
