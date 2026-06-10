@@ -1,4 +1,5 @@
 import { teams } from "@/data/teams";
+import TeamCard from "@/components/teams/TeamCard";
 
 export default function TeamsPage() {
   return (
@@ -7,15 +8,12 @@ export default function TeamsPage() {
 
       <div className="grid md:grid-cols-3 gap-6">
         {teams.map((team) => (
-          <div
+          <TeamCard
             key={team.id}
-            className="rounded-3xl border border-white/10 bg-white/5 p-8">
-            <h2 className="text-3xl font-bold">{team.name}</h2>
-
-            <p className="mt-2">FIFA Rank: {team.fifaRank}</p>
-
-            <p>{team.confederation}</p>
-          </div>
+            name={team.name}
+            fifaRank={team.fifaRank}
+            confederation={team.confederation}
+          />
         ))}
       </div>
     </main>
