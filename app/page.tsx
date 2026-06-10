@@ -1,10 +1,12 @@
+import Countdown from "@/components/home/Countdown";
+import FeaturedMatch from "@/components/home/FeaturedMatch";
+import Stats from "@/components/home/Stats";
 export default function Home() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-[#021526] text-white">
       {/* Background Glow */}
       <div className="absolute top-0 left-0 h-[500px] w-[500px] rounded-full bg-blue-500/20 blur-3xl" />
       <div className="absolute bottom-0 right-0 h-[500px] w-[500px] rounded-full bg-cyan-500/20 blur-3xl" />
-
       {/* Navbar */}
       <nav className="sticky top-0 z-50 flex items-center justify-between px-10 py-6 backdrop-blur-lg bg-white/5 border-b border-white/10">
         <h1 className="text-3xl font-bold text-[#E2E2B6]">🏆 Path to Glory</h1>
@@ -17,7 +19,6 @@ export default function Home() {
           <a href="#">Predictions</a>
         </div>
       </nav>
-
       {/* Hero */}
       <section className="relative flex min-h-[85vh] flex-col items-center justify-center text-center px-6">
         <div className="mb-4 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-6 py-2 text-sm text-cyan-300">
@@ -45,6 +46,9 @@ export default function Home() {
           </button>
         </div>
       </section>
+      <Countdown />
+      <FeaturedMatch />
+      <Stats />
     </main>
   );
 }
