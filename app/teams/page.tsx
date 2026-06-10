@@ -1,19 +1,26 @@
-import { teams } from "@/data/teams";
-import TeamCard from "@/components/teams/TeamCard";
+import { supabase } from "@/lib/supabase";
 
-export default function TeamsPage() {
+export default async function TeamsPage() {
+  const { data: teams } = await supabase
+    .from("teams")
+    .select("*")
+    .order("fifa_rank");
+
   return (
     <main className="min-h-screen bg-[#021526] text-white p-10">
       <h1 className="text-5xl font-bold mb-10">Teams</h1>
 
       <div className="grid md:grid-cols-3 gap-6">
-        {teams.map((team) => (
-          <TeamCard
+        {teams?.map((team) => (
+          <div
             key={team.id}
-            name={team.name}
-            fifaRank={team.fifaRank}
-            confederation={team.confederation}
-          />
+            className="rounded-3xl border border-white/10 bg-white/5 p-8">
+            <h2 className="text-3xl font-bold">{team.name}</h2>
+
+            <p className="mt-2">FIFA Rank: {team.fifa_rank}</p>
+
+            <p>{team.confederation}</p>
+          </div>
         ))}
       </div>
     </main>
